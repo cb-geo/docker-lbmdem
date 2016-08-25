@@ -6,8 +6,8 @@ services:
     - docker
 
 before_install:
-    - docker build -t "cbgeo/lem" ./
-    - docker run -ti cbgeo/lem /bin/bash -c "cd /"
+    - docker build -t "cbgeo/lbmdem" ./
+    - docker run -ti cbgeo/lbmdem /bin/bash -c "cd /"
     - docker ps -a
 
 script:
