@@ -1,15 +1,16 @@
-# Docker image for Lattice Boltzmann Method
-> Krishna Kumar
+# Docker image for Lattice Boltzmann - Discrete Element Method
+> Cambridge-Berkeley Computational Geomechanics group
 
-[![Docker image](https://img.shields.io/badge/docker--image-cbgeo--lbmdem-ff69b4.svg)](https://quay.io/repository/cbgeo/lbmdem)
-[![Docker Repository on Quay](https://quay.io/repository/cbgeo/lbmdem/status "Docker Repository on Quay")](https://quay.io/repository/cbgeo/lbmdem)
-[![Build status](https://api.travis-ci.org/cb-geo/docker-lbmdem.svg)](https://api.travis-ci.org/cb-geo/docker-lbmdem.svg)
 [![Docker hub](https://img.shields.io/badge/docker--hub-cbgeo--lbmdem-ff69b4.svg)](https://hub.docker.com/r/cbgeo/lbmdem)
+[![Docker image](https://img.shields.io/badge/docker--image-cbgeo--lbmdem-ff69b4.svg)](https://quay.io/repository/cbgeo/lbmdem)
+[![Build status](https://api.travis-ci.org/cb-geo/docker-lbmdem.svg)](https://api.travis-ci.org/cb-geo/docker-lbmdem.svg)
+[![](https://images.microbadger.com/badges/image/cbgeo/lbmdem.svg)](http://microbadger.com/images/cbgeo/lbmdem)
 
 ## Tools
 * Autotools
 * Clang
 * Clangformat
+* Eigen 3
 * GCC 6
 * Vim
 
