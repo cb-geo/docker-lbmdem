@@ -12,8 +12,8 @@ RUN useradd cbgeo
 USER cbgeo
 
 # Create a research directory and clone git repo of lbmdem code
-RUN mkdir -p /home/cbgeo/research && cd /home/cbgeo/research && git clone https://github.com/cb-geo/lbmdem.git
+RUN mkdir -p /home/cbgeo/research && cd /home/cbgeo/research && git clone https://github.com/cb-geo/lbm-dem.git
 
 # Change to lbmdem directory
-WORKDIR /home/cbgeo/research/lbmdem
+WORKDIR /home/cbgeo/research/lbm-dem
 
