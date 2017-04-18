@@ -4,7 +4,7 @@ MAINTAINER Krishna Kumar <kks32@cam.ac.uk>
 # Update to latest packages, remove vim-minimal & Install Git, GCC, Clang, Autotools and VIM
 RUN dnf update -y && \
     dnf remove -y vim-minimal python sqlite && \
-    dnf install -y clang cmake cppcheck eigen3-devel findutils gcc gcc-c++ git make ruby valgrind vim && \
+    dnf install -y clang cmake cppcheck eigen3-devel findutils gcc gcc-c++ git make ruby tar valgrind vim wget && \
     dnf clean all
 
 # Create a user cbgeo
