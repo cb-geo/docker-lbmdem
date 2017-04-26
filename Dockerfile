@@ -11,7 +11,7 @@ RUN dnf update -y && \
 RUN wget http://ftp.de.debian.org/debian/pool/main/l/lcov/lcov_1.11.orig.tar.gz && tar xf lcov_1.11.orig.tar.gz && make -C lcov-1.11/ install
 
 # KOKKOS
-RUN git clone git@github.com:kokkos/kokkos.git && cd kokkos && mkdir -p /opt/kokkos && mkdir build && cd build && ../generate_makefile.bash --with-openmp && make && make install
+RUN git clone https://github.com/kokkos/kokkos.git && cd kokkos && mkdir -p /opt/kokkos && mkdir build && cd build && ../generate_makefile.bash --with-openmp && make && make install
 
 # Create a user cbgeo
 RUN useradd cbgeo
