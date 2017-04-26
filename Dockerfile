@@ -10,9 +10,16 @@ RUN dnf update -y && \
 # Coverage 
 RUN wget http://ftp.de.debian.org/debian/pool/main/l/lcov/lcov_1.11.orig.tar.gz && tar xf lcov_1.11.orig.tar.gz && make -C lcov-1.11/ install
 
+# KOKKOS
+RUN git clone git@github.com:kokkos/kokkos.git && cd kokkos && mkdir -p /opt/kokkos && mkdir build && cd build && ../generate_makefile.bash --with-openmp && make && make install
+
 # Create a user cbgeo
 RUN useradd cbgeo
 USER cbgeo
+
+# KOKKOS PATH
+RUN export PATH=/opt/kokkos:$PATH
+RUN export LD_LIBRARY_PATH=/opt/kokkos/lib:$LD_LIBRARY_PATH
 
 # Create a research directory and clone git repo of lbmdem code
 RUN mkdir -p /home/cbgeo/research && cd /home/cbgeo/research && git clone https://github.com/cb-geo/lbm-dem.git
