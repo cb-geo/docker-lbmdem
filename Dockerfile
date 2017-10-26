@@ -1,4 +1,4 @@
-from fedora:latest
+FROM fedora:latest
 MAINTAINER Krishna Kumar <kks32@cam.ac.uk>
 
 # Update to latest packages, remove vim-minimal & Install Git, GCC, Clang, Autotools and VIM
@@ -23,9 +23,9 @@ RUN export LD_LIBRARY_PATH=/opt/kokkos/lib:$LD_LIBRARY_PATH
 RUN export PATH=/opt/kokkos-omp:$PATH
 RUN export LD_LIBRARY_PATH=/opt/kokkos-omp/lib:$LD_LIBRARY_PATH
 
-# Create a research directory and clone git repo of rockable code
-RUN mkdir -p /home/cbgeo/research && cd /home/cbgeo/research
+# Create a research directory and clone git repo of lbmdem code
+RUN mkdir -p /home/cbgeo/research && cd /home/cbgeo/research && git clone https://github.com/cb-geo/lbm-dem.git
 
 # Change to lbmdem directory
-WORKDIR /home/cbgeo/research/
+WORKDIR /home/cbgeo/research/lbm-dem
 
